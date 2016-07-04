@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Card Person</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/card-custom.css">
+		<link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- Preloader Script -->
+    <script type="text/javascript">
+      $(window).load(function() {
+          $('#preloader').fadeOut('slow');
+          setTimeout(function(){
+            $('#card-person').css({'display':'block'});
+          },1000)   
+      })
+    </script>
+	</head>
+	<body>
+    <!-- Master container -->
+		<div class="row">
+
+        <!-- General Card container -->
+        <div class="col s12 m4 l3 valign-wrapper container-preload">
+
+            <!-- Preloader container -->
+            <div id="preloader" class="preloader-wrapper big active valign">
+              <div class="spinner-layer spinner-blue-only">
+                <div class="circle-clipper left">
+                  <div class="circle"></div>
+                </div><div class="gap-patch">
+                  <div class="circle"></div>
+                </div><div class="circle-clipper right">
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card container -->
+            <div id="card-person" class="card hoverable person">
+
+              <!-- Big image card -->
+              <div class="card-image">
+                  <img src="img/cover_card.jpg">
+              </div>
+              
+              <!-- Info perfil content -->
+              <div class="card-content valign-wrapper">
+                	<div class="col s4">
+                  		<img src="img/avatar_card.jpg" alt="" class="circle responsive-img">
+                	</div>
+                	<div class="col s8 valign">
+                  		<h5 id="name"></h5>
+                  		<h6 id="occupation"></h6>
+               		</div>
+              </div>
+
+              <!-- Card actions buttons -->
+              <div class="card-action">
+
+                  <!-- Views item -->
+                  <div class="col s4 item-count it-views waves-effect waves-light">
+                    <i class="material-icons tiny center">visibility</i>
+                    <span id="views"></span>
+                  </div>
+
+                  <!-- Comments item -->
+                  <div class="col s4 item-count it-comments waves-effect waves-light modal-trigger" href="#modal1">
+                    <i class="material-icons tiny center">comment</i>
+                    <span id="comment"></span>
+                  </div>
+
+                  <!-- Likes item -->
+                  <div class="col s4 item-count it-likes waves-effect waves-light">
+                    <i class="material-icons tiny center">thumb_up</i>
+                    <span id="likes"></span>
+                  </div>
+
+              </div>
+           </div>
+        </div>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal bottom-sheet">
+          <div class="modal-content">
+            <div class="row">
+
+              <!-- form comments -->
+              <form class="col s12">
+                  <div class="input-field col s12 l6">
+                    <i class="material-icons prefix">person_pin</i>
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Full Name</label>
+                  </div>
+                  <div class="input-field col s12 l6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Commentary</label>
+                  </div>
+              </form>
+
+            </div>
+          </div>
+
+          <!-- Button submit form -->
+          <div class="modal-footer center-align">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+
+
+        </div>
+
+       <!-- Javascript files -->
+      <script type="text/javascript" src="js/data.js"></script>
+      <script type="text/javascript" src="materialize/js/bin/materialize.min.js"></script>
+	</body>
+</html>
